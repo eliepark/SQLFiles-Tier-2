@@ -100,7 +100,7 @@ on m.memid=b.memid
 and b.starttime like '2012-09-14%'
 inner join Facilities as f
 on b.facid=f.facid
-where (b.memid=0 and b.slots*f.guestcost>30) or (b.memid!=0 and b.slots*f.membercost>30)
+having cost > 30 
 order by cost desc
 
 
